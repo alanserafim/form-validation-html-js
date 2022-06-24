@@ -5,22 +5,38 @@
     
     Propriedades da tag input
 
-        *required
-        *type="text"/ "number" / "email" / "password"
-        *minlength="6"
-        *title="something"
+        *required => obrigatório
+        *type= "text"/ "number" / "email" / "password" / "date" / ... => tipo do input
+        *minlength="6"  => tamanho minimo do campo em caracteres
+        *title="mensagem de erro"
         *pattern="regex"
+        *Consultar referência.
 
-## Mensagems de erro
+    Modelo:
+         <div class="input-container">
+            <input name="" id="" class="input" type="text" placeholder="" data-tipo="" required>
+            <label class="input-label" for="cpf">CPF</label>
+            <span class="input-mensagem-erro">Este campo não está válido</span>
+        </div>
+
+
+    Referências:
+        https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+        https://www.w3schools.com/tags/tag_input.asp
+
+
+
+## Mensagens de erro
+
     No html: atributo title=""
     No JS: input.setCustomValidity('Mensagem customizada de erro')
-
 
 
 ## Validação do campo email
 
     type="email"
     
+
 ## Validaçaõ do campo senha
      
      type="password"
@@ -29,15 +45,15 @@
 
 ### Regex
 
-    https://regexlib.com/?AspxAutoDetectCookieSupport=1
-    https://regexr.com/
+    Referências:
+        https://regexlib.com/?AspxAutoDetectCookieSupport=1
+        https://regexr.com/
 
 
 ## Validação de data de nascimento
 
     type="date"
-    data-tipo="dataNascimento"
-    JS: if(erro) input.setCustomValidity(mensagem);
+   
 
 ### Verificando idade maior que 18 anos com JS:
         
